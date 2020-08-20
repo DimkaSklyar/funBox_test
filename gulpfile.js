@@ -73,8 +73,8 @@ gulp.task('js', function () {
 		'src/libs/jquery/dist/jquery.min.js',
 		'src/js/common.js', // Always at the end
 	])
-		//.pipe(concat('scripts.min.js'))
-		// .pipe(uglify()) // Mifify js (opt.)
+		.pipe(concat('scripts.min.js'))
+		//.pipe(uglify()) // Mifify js (opt.)
 		.pipe(gulp.dest('src/js'))
 		.pipe(browsersync.reload({ stream: true }))
 
